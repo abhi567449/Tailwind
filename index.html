@@ -6,40 +6,25 @@
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <h1>HTML Project with iframes</h1>
+    </header>
     
-        <legend>Personal Details</legend>
-        <label for="salutation">Salutation</label>
-        <br><select name="dropdown" id="">
-            <option value="">--None--</option>
-            <option value="">Mr.</option>
-            <option value="">Mrs.</option>
-        </select>
-        <br><br>
+    <section class="alter">
+        <h2>Local Content</h2>
+        <iframe src="alter.html" frameborder="1" ></iframe>
+    </section>
 
-        <label for="firstName">First Name: </label>
-        <input type="text" placeholder="First Name"><br><br>
+    <section class="EW">
+        <h2>External Website</h2>
+        <iframe src="https://www.javatpoint.com/" frameborder="1" height="350px
+    " width="500px"></iframe>
+    </section>
 
-        
-        <label for="lastName">Last Name: </label>
-        <input type="text" placeholder="Last Name"><br><br>
-
-        <label for="gender">Gender:</label>
-        <input type="radio"><span> Male</span>
-        <input type="radio"><span> Female</span>
-        <br><br>
-
-        <label for="mail">Email:</label>
-        <input type="email" placeholder="abc@gmail.com"><br><br>
-
-        <label for="dob">Date of birth:</label>
-        <input type="date"><br><br>
-
-        <label for="address">Address</label><br>
-        <textarea name="address" id="" cols="30" rows="5"></textarea>
-        <br><br>
-
-        <button>Submit</button>
-
-    
+    <section class="yt">
+        <h2>YouTube Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H335Vdkmdhk?si=NXw5KC0wrzSZRNIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
 </body>
 </html>
