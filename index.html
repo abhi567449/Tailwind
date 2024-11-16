@@ -1,537 +1,173 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Clone</title>
-    <link href="./YouTube Clone_files/icon" rel="stylesheet">
-    <link rel="stylesheet" href="./YouTube Clone_files/style.css">
-<style>
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Roboto','sans-serif';
-}
-
-/* header */
-
-.material-icons{
-    color: rgb(96,96,96);
-    font-family: 'Material Icons';
-    font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v142/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 15px;
-}
-
-.header_left{
-    display: flex;
-    align-items: center;
-}
-
-.header_left img{
-    width: 50px;
-    margin-left: 10px;
-}
-
-.header_left i{
-    padding: 0 10px;
-    cursor: pointer;
-}
-
-.header_search form{
-    border: 1px solid #ddd;
-    height: 35px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.header_search input{
-    width: 500px;
-    padding: 10px;
-    margin: 0;
-    height: 100%;
-    border: none;
-    border-radius: 0;
-}
-
-.header_search button{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    border: none;
-    border-radius: 0;
-    /* width: 50px; */
-}
-
-.main{
-    display: flex;
-    overflow: hidden;
-    height: calc(100vh - 70px);
-}
-
-.sidebar{
-    height: 100%;
-    width: 230px;
-    background-color: white;
-    overflow-y: scroll;
-}
-
-.sidebar_categories{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-.sidebar_category{
-    display: flex;
-    align-items: center;
-    padding: 15px 25px;
-}
-
-.sidebar_category span{
-    margin-left: 15px;
-}
-
-.sidebar_category:hover{
-    background-color: #e5e5e5;
-    cursor: pointer;
-}
-
-.sidebar::-webkit-scrollbar{
-    display:none
-}
-
-hr{
-    height: 1px;
-    background-color: #e5e5e5;
-    border: none;
-}
-
-.videos{
-    background-color: #f9f9f9;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    padding: 15px 15px;
-    border-top: 1px solid #ddd;
-}
-
-.videos_conatiner{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.video{
-    width: 310px;
-    margin-bottom: 30px;
-}
-
-.video_thumbnail{
-    width: 100%;
-    height: 170px;
-}
-
-.video_thumbnail img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.author img{
-    object-fit: cover;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-}
-
-.video_details{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-}
-
-.title{
-    display: flex;
-    flex-direction: column;
-}
-
-title h3{
-    color: rgb(3,3,3);
-   line-height: 18px;
-   font-size: 14px;
-   margin-bottom: 6px; 
-}
-
-.title a,span{
-    text-decoration: none;
-    color: rgb(96,96,96);
-    font-size: 14px;
-}
-
-h1{
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: rgb(3,3,3);
-}
-</style></head>
-
-<body>
-    <div class="header">
-        <div class="header_left">
-            <i class="material-icons">menu</i>
-            <img src="./YouTube Clone_files/unnamed.png" alt="youtube_image">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="heading">
+        <header class="hero">
+          <img
+            src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+            alt="freecodecamp logo"
+            loading="lazy"
+            class="hero-img"
+          />
+          <h1 class="hero-title">OUR NEW CURRICULUM</h1>
+          <p class="hero-subtitle">
+            Our efforts to restructure our curriculum with a more project-based
+            focus
+          </p>
+        </header>
+        <div class="author">
+          <p class="author-name">
+            By
+            <a href="https://freecodecamp.org" target="_blank" rel="noreferrer"
+              >freeCodeCamp</a
+            >
+          </p>
+          <p class="publish-date">March 7, 2019</p>
         </div>
-
-        <div class="header_search">
-            <form action="https://abhi567449.github.io/Youtube/">
-                <input type="text" placeholder="Search">
-                <button><i class="material-icons">search</i></button>
-            </form>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/freecodecamp/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/freecodecamp/">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/freecodecamp">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/school/free-code-camp/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.youtube.com/freecodecamp">
+            <i class="fab fa-youtube"></i>
+          </a>
         </div>
-
-        <div class="header_icons">
-            <i class="material-icons">search</i>
-            <i class="material-icons">videocam</i>
-            <i class="material-icons">apps</i>
-            <i class="material-icons">notifications</i>
-            <i class="material-icons">account_circle</i>
-        </div>
-    </div>
-
-    <div class="main">
-        <div class="sidebar">
-            <div class="sidebar_categories">
-                <div class="sidebar_category">
-                    <i class="material-icons">home</i>
-                    <span>Home</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">local_fire_department</i>
-                    <span>Trending</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">subscriptions</i>
-                    <span>Subscriptions</span>
-                </div>
-            </div>
-            <hr>
-
-            <div class="sidebar_categories">
-                <div class="sidebar_category">
-                    <i class="material-icons">library_add_check</i>
-                    <span>Library</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">history</i>
-                    <span>History</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">play_arrow</i>
-                    <span>Your Videos</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">watch_later</i>
-                    <span>Watch Later</span>
-                </div>
-                <div class="sidebar_category">
-                    <i class="material-icons">thumb_up</i>
-                    <span>Liked Videos</span>
-                </div>
-            </div>
-        </div>
-        <div class="videos">
-            <h1>Recommened</h1>
-            <div class="videos_conatiner">
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="video">
-                    <div class="video_thumbnail">
-                        <img src="./YouTube Clone_files/maxresdefault.jpg" alt="">
-                    </div>
-                    <div class="video_details">
-                        <div class="author">
-                            <img src="./YouTube Clone_files/web_de_icon.png" alt="">
-                        </div>
-                        <div class="title">
-                            <h3>
-                                Top % programming languages to learn in 2021 | Best Programminglanguage to learn
-                            </h3>
-                            <a href="https://abhi567449.github.io/Youtube/">FutureCoders</a>
-                            <span>10M Views * 3 Months ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body></html>
+      </section>
+      <section class="text">
+        <p class="first-paragraph">
+          Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects - step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
+        </p>
+        <p>
+          After years - years - of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! A picture of this! This is what makes time travel possible: the flux capacitor!
+        </p>
+        <p>
+          It wasn't as dramatic as Doc's revelation in Back to the Future. It
+          just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we'll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass. (And you can view hints if that isn't enough.)
+        </p>
+        <blockquote>
+          <hr />
+          <p class="quote">
+            The entire curriculum should be a series of projects
+          </p>
+          <hr />
+        </blockquote>
+        <p>
+          No more walls of explanatory text. No more walls of tests. Just one
+          test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there's plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.
+        </p>
+        <p>
+          The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from "reading mode" to "coding mode".
+        </p>
+        <p>
+          Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
+        </p>
+      </section>
+      <section class="text text-with-images">
+        <article class="brief-history">
+          <h3 class="list-title">A Brief History</h3>
+          <p>Of the Curriculum</p>
+          <ul class="lists">
+            <li>
+              <h4 class="list-subtitle">V1 - 2014</h4>
+              <p>
+                We launched freeCodeCamp with a simple list of 15 resources,
+                including Harvard's CS50 and Stanford's Database Class.
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V2 - 2015</h4>
+              <p>We added interactive algorithm challenges.</p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V3 - 2015</h4>
+              <p>
+                We added our own HTML+CSS challenges (before we'd been relying on
+                General Assembly's Dash course for these).
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V4 - 2016</h4>
+              <p>
+                We expanded the curriculum to 3 certifications, including Front
+                End, Back End, and Data Visualization. They each had 10 required
+                projects, but only the Front End section had its own challenges.
+                For the other certs, we were still using external resources like
+                Node School.
+              </p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V5 - 2017</h4>
+              <p>We added the back end and data visualization challenges.</p>
+            </li>
+            <li>
+              <h4 class="list-subtitle">V6 - 2018</h4>
+              <p>
+                We launched 6 new certifications to replace our old ones. This was
+                the biggest curriculum improvement to date.
+              </p>
+            </li>
+          </ul>
+        </article>
+        <aside class="image-wrapper">
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+            alt="image of the quote machine project"
+            loading="lazy"
+            class="image-1"
+            width="600"
+            height="400"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+            alt="image of a calculator project"
+            loading="lazy"
+            class="image-2"
+            width="400"
+            height="400"
+          />
+          <blockquote class="image-quote">
+            <hr />
+            <p class="quote">
+              The millions of people who are learning to code through freeCodeCamp
+              will have an even better resource to help them learn these
+              fundamentals.
+            </p>
+            <hr />
+          </blockquote>
+          <img
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg"
+            alt="four people working on code"
+            loading="lazy"
+            class="image-3"
+            width="600"
+            height="400"
+          />
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
