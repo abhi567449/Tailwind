@@ -5,48 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Template</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-            min-height: 100vh;
-        }
-        .container{
-            display: flex;
-            width: 1100;
-            justify-content: space-between;
-            -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0004);
-        }
-        .container img{
-            max-width: 350px;
-            transform-origin: center;
-            transform: perspective(800px) rotateY(20deg);
-            transition: 0.5s;
-            box-shadow: 0px 0px 8px grey;
-            border-radius: 5px;
-            -webkit-box-reflect: below;
-        }
-        .container:hover img{
-            opacity: 0.3;
-        }
-        .container img:hover {
-            transform: perspective(800px) rotateY(0deg);
-            opacity: 1;
-        }
+       .container
+       {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        padding-left: 500px;
+        padding-top: 100px;
+       }
+       .template-container
+       {
+        width: 900px;
+        height: 550px;
+        background-color: yellow;
+       }
+       .yellow
+       {
+        padding-top: 10px;
+        background-color: white;
+        height: 200px;
+
+        display: flex;
+       }
+       img{
+        padding-left: 40px;
+        padding-top: 40px;
+       }
+       h1{
+        padding-left: 10%;
+        text-align: center;
+        padding-top: 200px;
+       }
+       p
+       {
+        padding-left: 50px;
+        text-align: center;
+       }
+       .text
+       {
+        width: 50%;
+       }
+       span{
+        text-decoration: underline;
+       }
+       button{
+        background-color: black;
+        text-align: center;
+        color: white;
+        border-radius: 0%;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        border: none;
+        margin-left: 170px;
+       }
+       
     </style>
  
   </head>
   <body>
-    <div class="container">
-        <img src="./index_files/il_fullxfull.2947254491_3h0z.webp" alt="1">
-        <img src="./index_files/il_fullxfull.4341390936_pe43.webp" alt="2">
-        <img src="./index_files/81M1evI0qJL._UX679_.jpg" alt="3">
+<div class="container">
+    <div class="template-container">
+<div class="yellow">
+    <div class="image">
+        <img  src="./index_files/Screenshot from 2024-11-17 15-59-29.png">
+    </div>
+    <div class="text">
+        <h1>Certified Coffee Course</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <p>Image from <span>Freepik</span></p>
+        <button>Learn More</button>
     </div>
     
-</body></html>
+    
+    
+</div>
+    </div>
+</div>    
+    
+</body>
+</html>
